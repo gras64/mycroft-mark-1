@@ -39,7 +39,7 @@ def hex_to_rgb(_hex):
         if '#' in _hex:
             _hex = _hex.replace('#', "").strip()
         if len(_hex) != 6:
-            raise
+            raise ValueError('Invalid hex: ' + _hex)
         (r, g, b) = \
             int(_hex[0:2], 16), int(_hex[2:4], 16), int(_hex[4:6], 16)
         return (r, g, b)
